@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using ShoppingCartDemo.Areas.Identity.Data
+
+@inject SignInManager<ApplicationUser> SignInManager
+
+
+<ul class="navbar-nav">
+    @if (!SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <a  asp-area="Identity" asp-page="/Account/Login">Login</a>  
+        </li>
+    }
+
+</ul>
+
